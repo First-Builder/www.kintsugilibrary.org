@@ -47,3 +47,25 @@ p {
   background-color: #fff;
   color: #000;
 }
+.site-nav {
+  background-color: #222;
+  padding: 10px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
+.site-nav a {
+  color: #f9c56f;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: #fff;
+}
