@@ -24,6 +24,42 @@ body, html {
   box-shadow: 0 2px 6px #001f4dcc;
 }
 
+/* Navbar Styles */
+.navbar {
+  background-color: #000a1f; /* Deep midnight blue */
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid #00ffff; /* Electric blue underline */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 1.5rem;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #00ffff; /* Electric blue text */
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  border: 1px solid #ffd700; /* Gold border on hover */
+  background-color: #1a0033;  /* Slight purple hover background */
+}
+
 .site-nav a {
   color: #00aaff; /* Electric blue */
   margin: 0 18px;
