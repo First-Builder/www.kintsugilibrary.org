@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kintsugi Library</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="hero">
+    <h1>The Kintsugi Library</h1>
+    <p class="motto">Everything is revealed and honored in the light.</p>
+    <div class="button-group">
+      <a href="#" class="btn">Submit Ideas</a>
+      <a href="#" class="btn">Contribute</a>
+    </div>
+  </div>
+</body>
+</html>
