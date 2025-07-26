@@ -1,205 +1,115 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <style>
-  .floating-book {
-    width: 300px;
-    animation: float 6s ease-in-out infinite;
-    display: block;
-    margin: 0 auto 2rem;
-  }
-.codex-link {
-  color: #00bfff; /* Electric blue */
-  text-decoration: none;
-  font-weight: bold;
-}
-.codex-link:hover {
-  text-decoration: underline;
-}
-
-  @keyframes float {
-    0%   { transform: translateY(0px); }
-    50%  { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
-  }
-</style>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Kintsugi Library</title>
-<link rel="stylesheet" href="css/styles.css?v=2" />
-
-</head>
-<body>
-<nav class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="transmission.html">Transmission</a></li>
-    <li><a href="declaration.html">Declaration</a></li>
-    <li><a href="codex.html">Codex</a></li>
-    <li><a href="personal.html">Personal Truths</a></li>
-    <li><a href="page.html">Library Page</a></li>
-  </ul>
-</nav>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Codex of Harmonic Language</title>
   <style>
     body {
+      background-color: #000814;
+      color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #0e1a2b;
-      font-family: 'Segoe UI', sans-serif;
-      color: white;
+    }
+
+    nav {
+      background-color: #001d3d;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: #00b4d8;
+      text-decoration: none;
+      margin: 0 1em;
+      font-weight: bold;
     }
 
     .container {
       display: flex;
-      flex-wrap: wrap;
-      padding: 2rem;
+      flex-direction: row;
+      padding: 2em;
     }
 
     .left-column {
-      flex: 1 1 50%;
-      min-width: 300px;
-      padding-right: 2rem;
+      flex: 1;
+      padding-right: 2em;
     }
 
     .right-column {
-      flex: 1 1 40%;
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
-    }
-
-    .right-column img {
-      max-width: 100%;
-      height: auto;
-      filter: drop-shadow(0 0 20px gold);
-      animation: float 6s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
     }
 
     .accordion {
-      background-color: gold;
-      color: #0e1a2b;
+      background-color: #003566;
+      color: gold;
       cursor: pointer;
-      padding: 15px 20px;
-      margin: 10px 0;
+      padding: 1em;
+      width: 100%;
       border: none;
       text-align: left;
-      font-size: 1.2rem;
-      transition: background-color 0.3s ease;
-      border-radius: 6px;
-    }
-
-    .accordion:hover {
-      background-color: #ffd700cc;
+      outline: none;
+      font-size: 1.1em;
+      margin-top: 1em;
     }
 
     .panel {
-      max-height: 0;
+      background-color: #001d3d;
+      display: none;
       overflow: hidden;
-      transition: max-height 0.4s ease;
-      background-color: #16203b;
+      padding: 1em;
+      margin-bottom: 1em;
       border-left: 4px solid gold;
-      padding: 0 20px;
-      margin-bottom: 10px;
-    }
-
-    .panel.open {
-      max-height: 500px;
-      padding: 10px 20px;
     }
 
     .subject-line {
       font-weight: bold;
-      color: gold;
-      margin-bottom: 10px;
+      color: #ffd60a;
+      margin-bottom: 0.5em;
     }
 
-    a {
-      color: #00ccff;
+    .codex-link {
+      color: #00b4d8;
       text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
+    .codex-link:hover {
+      color: #90e0ef;
+    }
 
-      .left-column, .right-column {
-        flex: 1 1 100%;
-        padding: 0;
-      }
+    img.codex-book {
+      max-width: 90%;
+      height: auto;
+      animation: float 5s ease-in-out infinite;
+    }
 
-      .right-column {
-        margin-top: 30px;
-      }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="declaration.html">Declaration</a>
+    <a href="codex.html">Codex</a>
+    <a href="personal.html">Personal Truths</a>
+  </nav>
+
   <div class="container">
     <div class="left-column">
+      <!-- Accordion Section 1 -->
       <button class="accordion">Frequency & Light</button>
       <div class="panel">
         <div class="subject-line">Intro to Harmonic Frequency</div>
-        <p><a href="#"><div class="accordion-item">
-  <button class="accordion-button">Frequency</button>
-  <div class="accordion-content">
-    <p>Explore a full guide to healing frequencies:</p>
-    <a href="https://www.musicofwisdom.com/post/list-of-all-healing-frequencies-a-quick-guide" target="_blank" class="codex-link">Healing Frequencies Guide</a>
-  </div>
-</div>
-</a></p>
-      </div>
-
-      <button class="accordion">Sacred Geometry</button>
-      <div class="panel">
-        <div class="subject-line">Metatron's Cube and the Language of Form</div>
-        <p><a href="#">Watch the geometry unfold</a></p>
-      </div>
-
-      <button class="accordion">Words That Heal</button>
-      <div class="panel">
-        <div class="subject-line">Healing Intent through Resonance</div>
-        <p><a href="#">The Science of Sound and Vibration</a></p>
-      </div>
-
-      <button class="accordion">Symbols & Fractals</button>
-      <div class="panel">
-        <div class="subject-line">Universal Patterns Across Cultures</div>
-        <p><a href="#">Fractals as a Spiritual Mirror</a></p>
-      </div>
-
-      <!-- Add more accordions here as needed -->
-    </div>
-
-    <div class="right-column">
-      <img src="images/Kintsugi_Book.webp" alt="Floating Sacred Book" class="floating-book">
-
-    </div>
-  </div>
-
-  <script>
-    const acc = document.getElementsByClassName("accordion");
-    for (let i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        panel.classList.toggle("open");
-      });
-    }
-  </script>
-</body>
-</html>
+        <p>Explore a full guide to healing frequencies:</p>
+        <a href="https://www.musicofwisdom.com/post/list-of-all-healing-frequencies-a-quick-guide" target="_blank" class="codex-link">
+          Healing Frequencies Guide
+        <
