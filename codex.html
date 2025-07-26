@@ -2,114 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Codex of Harmonic Language</title>
   <style>
     body {
-      background-color: #000814;
-      color: #f4f4f4;
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-    }
-
-    nav {
-      background-color: #001d3d;
-      padding: 1em;
-      text-align: center;
-    }
-
-    nav a {
-      color: #00b4d8;
-      text-decoration: none;
-      margin: 0 1em;
-      font-weight: bold;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a192f;
+      color: gold;
     }
 
     .container {
-      display: flex;
-      flex-direction: row;
-      padding: 2em;
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
     }
 
-    .left-column {
-      flex: 1;
-      padding-right: 2em;
-    }
-
-    .right-column {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: gold;
     }
 
     .accordion {
-      background-color: #003566;
+      background-color: #111C3D;
       color: gold;
       cursor: pointer;
-      padding: 1em;
+      padding: 15px;
       width: 100%;
       border: none;
       text-align: left;
       outline: none;
       font-size: 1.1em;
-      margin-top: 1em;
+      margin-top: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion:hover {
+      background-color: #1e305d;
     }
 
     .panel {
-      background-color: #001d3d;
+      padding: 15px;
+      background-color: #0f2747;
       display: none;
       overflow: hidden;
-      padding: 1em;
-      margin-bottom: 1em;
-      border-left: 4px solid gold;
+      border-left: 3px solid gold;
+      margin-bottom: 20px;
+      border-radius: 0 0 5px 5px;
     }
 
     .subject-line {
       font-weight: bold;
-      color: #ffd60a;
-      margin-bottom: 0.5em;
+      font-size: 1.2em;
+      color: gold;
+      margin-bottom: 10px;
     }
 
     .codex-link {
-      color: #00b4d8;
+      color: #00bfff;
       text-decoration: underline;
     }
 
     .codex-link:hover {
-      color: #90e0ef;
+      text-decoration: none;
+      color: #33ccff;
     }
 
-    img.codex-book {
-      max-width: 90%;
-      height: auto;
-      animation: float 5s ease-in-out infinite;
+    /* Optional: Add smooth open/close animation */
+    .panel.opening {
+      animation: fadeIn 0.3s ease-in;
     }
 
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
     }
   </style>
 </head>
+
 <body>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="declaration.html">Declaration</a>
-    <a href="codex.html">Codex</a>
-    <a href="personal.html">Personal Truths</a>
-  </nav>
-
   <div class="container">
-    <div class="left-column">
-      <!-- Accordion Section 1 -->
+    <h1>Codex of Harmonic Language</h1>
+
+    <!-- Accordion Section: Frequency & Light -->
+    <div class="accordion-section">
       <button class="accordion">Frequency & Light</button>
       <div class="panel">
         <div class="subject-line">Intro to Harmonic Frequency</div>
         <p>Explore a full guide to healing frequencies:</p>
-        <a href="https://www.musicofwisdom.com/post/list-of-all-healing-frequencies-a-quick-guide" target="_blank" class="codex-link">
-          Healing Frequencies Guide
-        <
+        <a href="https://www.musicofwisdom.com/post/list-of-all-healing-frequencies-a-quick-guide" 
+           target="_blank" 
+           class="codex-link">
+           Healing Frequencies Guide
+        </a>
+      </div>
+    </div>
+
+    <!-- Future sections can be added below -->
+    <!-- Example:
+    <div class="accordion-section">
+      <button class="accordion">Sacred Geometry</button>
+      <div class="panel">
+        <div class="subject-line">What is Geometry in Light Language?</div>
+        <p>Coming soon...</p>
+      </div>
+    </div>
+    -->
+
+  </div>
+
+  <script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+          panel.classList.add("opening");
+          setTimeout(() => panel.classList.remove("opening"), 300);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
