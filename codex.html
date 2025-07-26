@@ -1,125 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Codex of Harmonic Language</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #0e0f1a;
-      color: #fff;
-      display: flex;
-      flex-direction: row;
-      min-height: 100vh;
+      padding: 0;
+      background-color: #0e1a2b;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
     }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+    }
+
     .left-column {
-      width: 60%;
-      padding: 40px;
+      flex: 1 1 50%;
+      min-width: 300px;
+      padding-right: 2rem;
     }
+
     .right-column {
-      width: 40%;
-      background: #1b1d2a;
+      flex: 1 1 40%;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 20px;
+      align-items: center;
+      position: relative;
     }
-    .floating-book {
-      max-width: 80%;
-      animation: float 4s ease-in-out infinite;
+
+    .right-column img {
+      max-width: 100%;
+      height: auto;
+      filter: drop-shadow(0 0 20px gold);
+      animation: float 6s ease-in-out infinite;
     }
+
     @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
     }
-    h1 {
-      font-size: 2em;
+
+    .accordion {
+      background-color: gold;
+      color: #0e1a2b;
+      cursor: pointer;
+      padding: 15px 20px;
+      margin: 10px 0;
+      border: none;
+      text-align: left;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .accordion:hover {
+      background-color: #ffd700cc;
+    }
+
+    .panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background-color: #16203b;
+      border-left: 4px solid gold;
+      padding: 0 20px;
+      margin-bottom: 10px;
+    }
+
+    .panel.open {
+      max-height: 500px;
+      padding: 10px 20px;
+    }
+
+    .subject-line {
+      font-weight: bold;
       color: gold;
       margin-bottom: 10px;
     }
-    .subtitle {
-      color: #aaa;
-      font-size: 0.9em;
-      margin-bottom: 30px;
-    }
-    .accordion {
-      background-color: gold;
-      color: #0e0f1a;
-      cursor: pointer;
-      padding: 14px 20px;
-      margin-top: 10px;
-      width: 100%;
-      text-align: left;
-      border: none;
-      outline: none;
-      font-size: 1em;
-      transition: 0.3s;
-    }
-    .accordion:hover {
-      background-color: #f3c90c;
-    }
-    .panel {
-      padding: 10px 20px;
-      display: none;
-      background-color: #16203b;
-      color: #fff;
-      border-left: 3px solid gold;
-      margin-bottom: 10px;
-    }
-    .subject-line {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .codex-link {
-      color: #00caff;
-      text-decoration: none;
-    }
-    .codex-link:hover {
+
+    a {
+      color: #00ccff;
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left-column, .right-column {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+
+      .right-column {
+        margin-top: 30px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="left-column">
-    <div class="subtitle">TO STEP THROUGH THE VEIL, ONE MUST LEARN THE DIALECT OF LIGHT</div>
-    <h1>Codex of Harmonic Language</h1>
-    <div class="subtitle">learning to speak the language of the universe</div>
+  <div class="container">
+    <div class="left-column">
+      <button class="accordion">Language & Light</button>
+      <div class="panel">
+        <div class="subject-line">Intro to Harmonic Frequency</div>
+        <p><a href="#">Link to Source Material</a></p>
+      </div>
 
-    <!-- Sample Accordion Sections -->
-    <button class="accordion">Sound & Frequency</button>
-    <div class="panel">
-      <div class="subject-line">(Your subject line here)</div>
-      <p>Brief description, note, or insight here.</p>
-      <a class="codex-link" href="#">Insert hyperlink to source</a>
+      <button class="accordion">Sacred Geometry</button>
+      <div class="panel">
+        <div class="subject-line">Metatron's Cube and the Language of Form</div>
+        <p><a href="#">Watch the geometry unfold</a></p>
+      </div>
+
+      <button class="accordion">Words That Heal</button>
+      <div class="panel">
+        <div class="subject-line">Healing Intent through Resonance</div>
+        <p><a href="#">The Science of Sound and Vibration</a></p>
+      </div>
+
+      <button class="accordion">Symbols & Fractals</button>
+      <div class="panel">
+        <div class="subject-line">Universal Patterns Across Cultures</div>
+        <p><a href="#">Fractals as a Spiritual Mirror</a></p>
+      </div>
+
+      <!-- Add more accordions here as needed -->
     </div>
 
-    <button class="accordion">Color & Light</button>
-    <div class="panel">
-      <div class="subject-line">(Your subject line here)</div>
-      <p>Brief description, note, or insight here.</p>
-      <a class="codex-link" href="#">Insert hyperlink to source</a>
+    <div class="right-column">
+      <img src="images/sacred_truths_book.png" alt="Floating Sacred Truths Book" />
     </div>
-
-    <!-- Add more sections as needed -->
-  </div>
-
-  <div class="right-column">
-    <img src="images/sacred_truths_book.png" alt="Floating Sacred Truths Book" class="floating-book">
   </div>
 
   <script>
     const acc = document.getElementsByClassName("accordion");
     for (let i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
+      acc[i].addEventListener("click", function () {
         this.classList.toggle("active");
         const panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
+        panel.classList.toggle("open");
       });
     }
   </script>
