@@ -61,3 +61,130 @@
   <a href="resources.html" class="button">Resources</a>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codex of Harmonic Language</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #0e0f1a;
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+    }
+    .left-column {
+      width: 60%;
+      padding: 40px;
+    }
+    .right-column {
+      width: 40%;
+      background: #1b1d2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .floating-book {
+      max-width: 80%;
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    h1 {
+      font-size: 2em;
+      color: gold;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #aaa;
+      font-size: 0.9em;
+      margin-bottom: 30px;
+    }
+    .accordion {
+      background-color: gold;
+      color: #0e0f1a;
+      cursor: pointer;
+      padding: 14px 20px;
+      margin-top: 10px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+    .accordion:hover {
+      background-color: #f3c90c;
+    }
+    .panel {
+      padding: 10px 20px;
+      display: none;
+      background-color: #16203b;
+      color: #fff;
+      border-left: 3px solid gold;
+      margin-bottom: 10px;
+    }
+    .subject-line {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .codex-link {
+      color: #00caff;
+      text-decoration: none;
+    }
+    .codex-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="left-column">
+    <div class="subtitle">TO STEP THROUGH THE VEIL, ONE MUST LEARN THE DIALECT OF LIGHT</div>
+    <h1>Codex of Harmonic Language</h1>
+    <div class="subtitle">learning to speak the language of the universe</div>
+
+    <!-- Sample Accordion Sections -->
+    <button class="accordion">Sound & Frequency</button>
+    <div class="panel">
+      <div class="subject-line">(Your subject line here)</div>
+      <p>Brief description, note, or insight here.</p>
+      <a class="codex-link" href="#">Insert hyperlink to source</a>
+    </div>
+
+    <button class="accordion">Color & Light</button>
+    <div class="panel">
+      <div class="subject-line">(Your subject line here)</div>
+      <p>Brief description, note, or insight here.</p>
+      <a class="codex-link" href="#">Insert hyperlink to source</a>
+    </div>
+
+    <!-- Add more sections as needed -->
+  </div>
+
+  <div class="right-column">
+    <img src="images/sacred_truths_book.png" alt="Floating Sacred Truths Book" class="floating-book">
+  </div>
+
+  <script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
