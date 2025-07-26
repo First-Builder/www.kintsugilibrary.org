@@ -9,6 +9,14 @@
     display: block;
     margin: 0 auto 2rem;
   }
+.codex-link {
+  color: #00bfff; /* Electric blue */
+  text-decoration: none;
+  font-weight: bold;
+}
+.codex-link:hover {
+  text-decoration: underline;
+}
 
   @keyframes float {
     0%   { transform: translateY(0px); }
@@ -143,10 +151,17 @@
 <body>
   <div class="container">
     <div class="left-column">
-      <button class="accordion">Language & Light</button>
+      <button class="accordion">Frequency & Light</button>
       <div class="panel">
         <div class="subject-line">Intro to Harmonic Frequency</div>
-        <p><a href="#">Link to Source Material</a></p>
+        <p><a href="#"><div class="accordion-item">
+  <button class="accordion-button">Frequency</button>
+  <div class="accordion-content">
+    <p>Explore a full guide to healing frequencies:</p>
+    <a href="https://www.musicofwisdom.com/post/list-of-all-healing-frequencies-a-quick-guide" target="_blank" class="codex-link">Healing Frequencies Guide</a>
+  </div>
+</div>
+</a></p>
       </div>
 
       <button class="accordion">Sacred Geometry</button>
